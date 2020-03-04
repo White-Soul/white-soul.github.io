@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/03/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-03T11:19:41.976Z">
 <meta property="article:modified_time" content="2020-03-03T11:19:41.976Z">
 <meta property="article:author" content="white-soul">
@@ -29,7 +29,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
     }
   </style>
   
@@ -84,7 +84,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-			<a class="github" target="_blank" href="#" title="github"><i
+			<a class="github" target="_blank" href="http://github.com/white-soul" title="github"><i
 					class="icon-github"></i></a>
 			
 			<a class="weibo" target="_blank" href="#" title="weibo"><i
@@ -133,7 +133,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="http://github.com/white-soul" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -348,16 +348,35 @@
         </div>
       </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2020 white-soul
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
+	<div class="outer">
+		<div id="footer-info">
+			<div class="footer-left">
+				<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+				<script>
+					var now = new Date();
+					function createtime() {
+						var grt = new Date("03/03/2020 20:00:00");//此处修改你的建站时间或者网站上线时间 
+						now.setTime(now.getTime() + 250);
+						days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+						hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+						if (String(hnum).length == 1) { hnum = "0" + hnum; } minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+						mnum = Math.floor(minutes); if (String(mnum).length == 1) { mnum = "0" + mnum; }
+						seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+						snum = Math.round(seconds); if (String(snum).length == 1) { snum = "0" + snum; }
+						document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+						document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+					}
+					setInterval("createtime()", 250);
+				</script>
+
+				&copy; 2020 white-soul
+			</div>
+			<div class="footer-right">
+				<a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a
+					href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+			</div>
+		</div>
+	</div>
 </footer>
     </div>
     <script>
@@ -383,48 +402,33 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
+    <%
+  var hasInnerArchive = theme.smart_menu.innerArchive
+  var hasFriends = theme.smart_menu.friends
+  var hasAboutme = theme.smart_menu.aboutme
+%>
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <% var count = 0%>
+    <% for (var i in theme.smart_menu){ %>
+      <% if (theme.smart_menu[i]) { %>
+      <% count++ %>
+      <% } %>
+    <% } %>
+    <% var ulWidth = '70%' %>
 
-    <ul style="width: 70%">
-      
-      
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)"
-          q-class="active:innerArchive">所有文章</a></li>
-      
-      
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)"
-          q-class="active:friends">友链</a></li>
-      
-      
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)"
-          q-class="active:aboutme">关于我</a></li>
-      
-      
+    <ul style="width: <%= ulWidth %>">
+    <% var divide = 100 / count + '%' %>
+    <% for (var i in theme.smart_menu){ %>
+      <% if(theme.smart_menu[i]){ %>
+      <li style="width: <%= divide %>" q-on="click: openSlider(e, '<%-i%>')"><a href="javascript:void(0)" q-class="active:<%-i%>"><%= theme.smart_menu[i] %></a></li>
+      <% } %>
+        <%}%>
     </ul>
   </div>
   <div class="tools-wrap">
-    
-      <section class="tools-section tools-section-all" q-show="innerArchive">
+    <%if(hasInnerArchive){%>
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
         <div class="search-wrap">
           <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
           <i class="icon-search icon" q-show="search|isEmptyStr"></i>
@@ -436,16 +440,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-            
+            <% site.tags.forEach(function(tag, i){ %> 
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color<%= tag.name.length % 5 + 1 %>"><%-tag.name%></a>
+              </li>
+            <% }) %>
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br />1、请确保node版本大于6.2<br />2、在博客根目录（注意不是yilia根目录）执行以下命令：<br /> npm i hexo-generator-json-content
-            --save<br /><br />
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
-            <pre style="font-size: 12px;" q-show="jsonFail">
+<pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
     meta: false
     pages: false
@@ -467,8 +474,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </pre>
           </p>
           <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span
-                q-text="title"></span></a>
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
             <p class="search-time">
               <i class="icon-calendar icon"></i>
               <span q-text="date|dateformat"></span>
@@ -479,60 +485,32 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </p>
           </li>
         </ul>
-      </section>
-      
+    	</section>
+    <%}%>
 
-    
-      <section class="tools-section tools-section-friends" q-show="friends">
-        
+    <%if(hasFriends){%>
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		<%if(theme.friends && theme.friends.length != 0){%>
         <ul class="search-ul">
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接1</a>
-          </li>
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接2</a>
-          </li>
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接3</a>
-          </li>
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接4</a>
-          </li>
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接5</a>
-          </li>
-          
-          <li class="search-li">
-            <a href="http://localhost:4000/" target="_blank" class="search-title"><i
-                class="icon-quo-left icon"></i>友情链接6</a>
-          </li>
-          
+          <% for (var i in theme.friends){ %>
+            <li class="search-li">
+              <a href="<%- url_for(theme.friends[i]) %>" target="_blank" class="search-title"><i class="icon-quo-left icon"></i><%= i %></a>
+            </li>
+          <% } %>
         </ul>
-        
+  		<%}%>
     	</section>
-    
+    <%}%>
 
-        
-        <section class="tools-section tools-section-me" q-show="aboutme">
-          
-          <div class="aboutme-wrap" id="js-aboutme">
-            很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家
-          </div>
-          
+    <%if(hasAboutme){%>
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	<%if(theme.aboutme){%>
+  	  		<div class="aboutme-wrap" id="js-aboutme"><%=theme.aboutme%></div>
+  	  	<%}%>
     	</section>
-    
+    <%}%>
   </div>
-
+  
 </div>
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -601,5 +579,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":"fasle"},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":"fasle"},"log":false});</script></body>
 </html>
