@@ -59,7 +59,16 @@
 		</hgroup>
 		
 		<p id="hitokoto">:D 获取中...</p>
-		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+		<!-- <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script> -->
+		<script>
+			fetch('https://v1.hitokoto.cn')
+				.then(response => response.json())
+				.then(data => {
+					const hitokoto = document.getElementById('hitokoto');
+					hitokoto.innerText = data.hitokoto;
+				})
+				.catch(err => console.error(err));
+		</script>
 		
 
 		<nav class="header-menu">
