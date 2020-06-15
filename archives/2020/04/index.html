@@ -6,20 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>大数的阶乘 | white-soul的博客</title>
+  <title>Archives: 2020/4 | white-soul的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大数的阶乘。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="大数的阶乘">
-<meta property="og:url" content="http://yoursite.com/2020/03/08/%E5%A4%A7%E6%95%B0%E7%9A%84%E9%98%B6%E4%B9%98/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="white-soul的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
 <meta property="og:site_name" content="white-soul的博客">
-<meta property="og:description" content="大数的阶乘。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-08T08:20:12.000Z">
-<meta property="article:modified_time" content="2020-03-08T08:38:46.331Z">
 <meta property="article:author" content="white-soul">
-<meta property="article:tag" content="C&#x2F;C++">
-<meta property="article:tag" content="基础算法。">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="white-soul的博客" type="application/atom+xml">
@@ -193,243 +187,101 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-大数的阶乘" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+  
     
-      <header class=" article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2020/04/20/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" class="archive-article-date">
+	<time datetime="2020-04-20T03:26:48.000Z" itemprop="datePublished"><i
+			class="icon-calendar icon"></i>2020-04-20</time>
+</a>
+        </div>
+    	 
   
-  
-    <h1 class="article-title" itemprop="name">
-      大数的阶乘
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/20/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>
     </h1>
   
 
-  <!--显示阅读次数-->
-  
-  <br />
-  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-    <span class="icon-sort"></span>
-    <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-      阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-    </span>
-  </a>
-  
-  <!--显示阅读次数完毕-->
-  
-  
-<!-- 不蒜子统计 -->
-<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-</span>
-
-<a href="/2020/03/08/%E5%A4%A7%E6%95%B0%E7%9A%84%E9%98%B6%E4%B9%98/" class="archive-article-date">
-	<time datetime="2020-03-08T08:20:12.000Z" itemprop="datePublished"><i
-			class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-  
-  <div style="margin-top:10px;">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="fa fa-keyboard-o"></i>
-            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 字数统计: </span>
-            <!--这里样式可以自己定制-->
-            <span class="post-count" style="font-size: 16px;color: grey">170字</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="fa fa-hourglass-half"></i>
-            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 阅读时长: </span>
-            <span class="post-count" style="font-size: 16px;color: grey">1分</span>
-        </span>
-    </span>
-</div>
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="大数的阶乘。"><a href="#大数的阶乘。" class="headerlink" title="大数的阶乘。"></a>大数的阶乘。</h2><a id="more"></a>
-<h3 id="题目。"><a href="#题目。" class="headerlink" title="题目。"></a>题目。</h3><p>求 10000 以内 n 的阶乘。</p>
-<blockquote>
-<p>输入格式</p>
-</blockquote>
-<p>只有一行输入，整数 n(0≤n≤10000)。</p>
-<blockquote>
-<p>输出格式</p>
-</blockquote>
-<p>一行，即 n! 的值。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">50001</span>] = &#123;<span class="number">1</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> n, len = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) <span class="comment">// 从1乘到n。</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 两个for循环用来储存数据</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= len; j++) </span><br><span class="line">        &#123;</span><br><span class="line">            a[j] = a[j] * i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= len; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[len] &gt;= <span class="number">10</span>)  <span class="comment">// 计算位数。</span></span><br><span class="line">                len++;</span><br><span class="line">            <span class="keyword">if</span> (a[k] &gt;= <span class="number">10</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                a[k + <span class="number">1</span>] += a[k] / <span class="number">10</span>;</span><br><span class="line">                a[k] = a[k] % <span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = len; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-
-    
-
-    
-    <div class="page-reward">
-      <a href="javascript:;" class="page-reward-btn tooltip-top">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  
-                </div>
-              </span>
-            </span>
-          </span>
-        </div>
-      </a>
-    </div>
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">基础算法。</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">--C++ --算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-    
+          
 
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/08/%E5%A4%A7%E6%95%B0%E7%9A%84%E9%98%B6%E4%B9%98/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
   
-  <a href="/2020/03/16/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
-    <i class="icon-circle-left"></i>
-    <div class="article-nav-title">
-      
-      函数重载
-      
-    </div>
-  </a>
-  
-  
-  <a href="/2020/03/06/%E5%A4%A7%E6%95%B0%E5%9B%A0%E5%AD%90%E7%9A%84%E8%AE%A1%E7%AE%97/" id="article-nav-older" class="article-nav-link-wrap">
-    <div class="article-nav-title">大数因子的计算</div>
-    <i class="icon-circle-right"></i>
-  </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2020/04/08/%E7%B1%BB%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+	<time datetime="2020-04-08T05:42:20.000Z" itemprop="datePublished"><i
+			class="icon-calendar icon"></i>2020-04-08</time>
+</a>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#大数的阶乘。"><span class="toc-number">1.</span> <span class="toc-text">大数的阶乘。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目。"><span class="toc-number">1.1.</span> <span class="toc-text">题目。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.2.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/08/%E7%B1%BB%E7%AE%80%E4%BB%8B/">类简介</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-- C++ -- ?</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
         </div>
-        
-    </div>
-</aside>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
-
-
-
-
-
-
-
-
-
-
+    
 
 
           </div>
@@ -485,8 +337,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-			isArchive: false,
+		isPost: false,
+			isArchive: true,
 				isTag: false,
 					isCategory: false,
 						open_in_new: false,
