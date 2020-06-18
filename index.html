@@ -245,20 +245,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="违规信息管理系统–2"><a href="#违规信息管理系统–2" class="headerlink" title="违规信息管理系统–2"></a>违规信息管理系统–2</h2><h4 id="1-添加模块。"><a href="#1-添加模块。" class="headerlink" title="1.添加模块。"></a>1.添加模块。</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">定义在lnitialize.c文件中</span><br><span class="line">lnit();		<span class="comment">//初始化系统，将3个基本用户读取到内存中。在系统结束后释放。</span></span><br><span class="line">install_dp();	<span class="comment">//新添加的函数，用来添加新用户。</span></span><br><span class="line">install();		<span class="comment">//添加user的违规信息</span></span><br><span class="line">install_old();	<span class="comment">//对现有的用户添加违规信息。</span></span><br></pre></td></tr></table></figure>
-
-<p>lint() 进行初始化，创建用户数组包含3个用户数据。3个最基本的用户。</p>
-<p>install_dp()函数显示一个菜单让管理员选择是否新建用户还是给旧用户添加信息。</p>
-<p>install()函数含有添加新用户的程序。需要输入用户名，密码。并且需要在创建时给用户添加其信息包括姓名，余额，id(用户名)，分数.</p>
-<p>install_old()函数给现有用户添加违规信息。如果用户分数清零，则会删除用户。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Days</span><span class="params">(struct vio_infor *D)</span></span></span><br></pre></td></tr></table></figure>
-
-<p>Days()函数返回违规日期至今天的天数。</p>
-<h4 id="2-显示模块"><a href="#2-显示模块" class="headerlink" title="2.显示模块"></a>2.显示模块</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Inquire();		<span class="comment">//显示用户信息</span></span><br><span class="line"><span class="built_in">display</span>(FILE *fp);		<span class="comment">//打印违规信息</span></span><br><span class="line">lnit_display();	<span class="comment">//显示所有用户的ID</span></span><br></pre></td></tr></table></figure>
-
-<p>Inquire()函数显示一个提示框，提示用户输入需要查询的用户的Id.</p>
-<p>display()函数用来打印用户的违规信息，Inquire()函数调用display()并且传递一个文件指针，指向需要查询的用户的文件。</p>
-<p>lnit_display()显示能够查询的用户数量并且显示所有能查询的用户的Id.</p>
-
+    
     
 
     
@@ -1335,19 +1322,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">C语言</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">基础算法</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">C++</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">函数</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">--C++ --算法</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">博客文章</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1359,15 +1346,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">博客文章</a>
+              <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">基础算法</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">-- C++ -- ?</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">--C++ --算法</a>
             </li>
             
             <li class="article-tag-list-item">
