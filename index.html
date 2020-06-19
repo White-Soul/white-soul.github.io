@@ -86,7 +86,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 11
+    总文章数 12
     </nav>
     <nav class="header-smart-menu">
       
@@ -197,6 +197,103 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-缴费模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/19/%E7%BC%B4%E8%B4%B9%E6%A8%A1%E5%9D%97/">缴费模块</a>
+    </h1>
+  
+
+  <!--显示阅读次数-->
+  
+  <!--显示阅读次数完毕-->
+  
+  
+<a href="/2020/06/19/%E7%BC%B4%E8%B4%B9%E6%A8%A1%E5%9D%97/" class="archive-article-date">
+	<time datetime="2020-06-19T14:28:13.000Z" itemprop="datePublished"><i
+			class="icon-calendar icon"></i>2020-06-19</time>
+</a>
+  
+  <div style="margin-top:10px;">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="fa fa-keyboard-o"></i>
+            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 字数统计: </span>
+            <!--这里样式可以自己定制-->
+            <span class="post-count" style="font-size: 16px;color: grey">190字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="fa fa-hourglass-half"></i>
+            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 阅读时长: </span>
+            <span class="post-count" style="font-size: 16px;color: grey">1分</span>
+        </span>
+    </span>
+</div>
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="缴费模块"><a href="#缴费模块" class="headerlink" title="缴费模块"></a>缴费模块</h2><h4 id="1-缴费显示界面"><a href="#1-缴费显示界面" class="headerlink" title="1.缴费显示界面"></a>1.缴费显示界面</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Payment</span><span class="params">()</span>	<span class="comment">//该函数显示缴费主界面。</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display_Am</span><span class="params">()</span>	<span class="comment">//该函数显示用户余额</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pay_face</span><span class="params">()</span>		<span class="comment">// 该函数用来缴费操作。</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Payment()函数的实现过程很显然。</p>
+<p>display_Am()函数，需要一个全局变量User_Own来储存登录用户的Id读取用户的信息并且打印用户的余额。</p>
+<p>Pay_face()函数，打开用户的文件，将所有的违规信息显示在窗口上。并且读取用户输入，来选择要交费的信息。</p>
+<h4 id="2-调试时出现的错误。"><a href="#2-调试时出现的错误。" class="headerlink" title="2.调试时出现的错误。"></a>2.调试时出现的错误。</h4><ol>
+<li>在调试时出现运行缴费操作时，会出现程序中断。</li>
+<li>在调试时选择操作时会运行另外的操作。</li>
+</ol>
+<h5 id="1-修改"><a href="#1-修改" class="headerlink" title="1.修改"></a>1.修改</h5><p>对于第一点，是因为</p>
+
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/06/19/%E7%BC%B4%E8%B4%B9%E6%A8%A1%E5%9D%97/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
     <article id="post-初始化模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1097,96 +1194,6 @@
 
 
   
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-  <!--显示阅读次数-->
-  
-  <!--显示阅读次数完毕-->
-  
-  
-<a href="/2020/03/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-	<time datetime="2020-03-03T12:35:31.115Z" itemprop="datePublished"><i
-			class="icon-calendar icon"></i>2020-03-03</time>
-</a>
-  
-  <div style="margin-top:10px;">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="fa fa-keyboard-o"></i>
-            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 字数统计: </span>
-            <!--这里样式可以自己定制-->
-            <span class="post-count" style="font-size: 16px;color: grey">36字</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="fa fa-hourglass-half"></i>
-            <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 阅读时长: </span>
-            <span class="post-count" style="font-size: 16px;color: grey">1分</span>
-        </span>
-    </span>
-</div>
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <hr>
-<p>title: 我的第一篇博客<br>date: 2020-03-03 20:33:42<br>tags:<br>–</p>
-<h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>从今天开始我就有我的博客了</p>
-<pre><code>&gt;_&lt;</code></pre>
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1345,19 +1352,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">--C++ --算法</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">--c语言</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">博客文章</a>
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">--C++ --算法</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">-- C++ -- ?</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">--c语言</a>
             </li>
             
             <div class="clearfix"></div>
