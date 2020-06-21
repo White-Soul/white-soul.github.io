@@ -16,7 +16,7 @@
 <meta property="og:description" content="缴费模块1.缴费显示界面123void Payment()	&#x2F;&#x2F;该函数显示缴费主界面。void display_Am()	&#x2F;&#x2F;该函数显示用户余额void Pay_face()		&#x2F;&#x2F; 该函数用来缴费操作。  Payment()函数的实现过程很显然。 display_Am()函数，需要一个全局变量User_Own来储存登录用户的Id读取用户的信息并且打印用户的余额。 Pay_face()函数，打开用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-19T14:28:13.000Z">
-<meta property="article:modified_time" content="2020-06-19T14:44:54.941Z">
+<meta property="article:modified_time" content="2020-06-21T08:20:49.805Z">
 <meta property="article:author" content="white-soul">
 <meta name="twitter:card" content="summary">
   
@@ -241,7 +241,7 @@
             <i class="fa fa-keyboard-o"></i>
             <span class="post-meta-item-text" style="font-size: 16px;color: grey"> 字数统计: </span>
             <!--这里样式可以自己定制-->
-            <span class="post-count" style="font-size: 16px;color: grey">190字</span>
+            <span class="post-count" style="font-size: 16px;color: grey">228字</span>
         </span>
     </span>
 
@@ -269,7 +269,8 @@
 <li>在调试时出现运行缴费操作时，会出现程序中断。</li>
 <li>在调试时选择操作时会运行另外的操作。</li>
 </ol>
-<h5 id="1-修改"><a href="#1-修改" class="headerlink" title="1.修改"></a>1.修改</h5><p>对于第一点，是因为</p>
+<h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><p>对于第一点，是因为在程序运行过程中，有些指针没有设为空。</p>
+<p>对于第二点，是因为系统没有在应该暂停的地方暂停。</p>
 
     
 
@@ -393,7 +394,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缴费模块"><span class="toc-number">1.</span> <span class="toc-text">缴费模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-缴费显示界面"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.缴费显示界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-调试时出现的错误。"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.调试时出现的错误。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-修改"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.修改</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缴费模块"><span class="toc-number">1.</span> <span class="toc-text">缴费模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-缴费显示界面"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.缴费显示界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-调试时出现的错误。"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.调试时出现的错误。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#修改"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">修改</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -549,14 +550,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">基础算法。</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">C语言</a>
             </li>
             
@@ -566,6 +559,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">博客文章</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">基础算法。</a>
             </li>
             
             <li class="article-tag-list-item">
